@@ -1,51 +1,93 @@
-@media (max-width: 768px) {
-    #field > div {
-        width: 15px;
-        height: 15px;
-        line-height: 15px;
-    }
-
-    #field {
-        gap: 2px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    #fieldSize {
-        width: 80px;
-        height: 25px;
-    }
-
-    button {
-        padding: 8px 12px;
-        font-size: 12px;
-    }
+* {
+    box-sizing: border-box;
 }
 
-@media (max-width: 480px) {
-    #field > div {
-        width: 10px;
-        height: 10px;
-        line-height: 10px;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fde8d7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
 
-    #field {
-        gap: 1px;
-    }
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    h1 {
-        font-size: 16px;
-    }
+h1 {
+    color: #3a3939;
+    font-size: 24px;
+}
 
-    #fieldSize {
-        width: 60px;
-        height: 20px;
-    }
+#begin {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    button {
-        padding: 6px 10px;
-        font-size: 10px;
-    }
+#fieldSize {
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    border: 1px solid #bab1b1;
+}
+
+#startButton {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #e9c3dd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background-color: #e2399c;
+}
+
+#status {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#status > *:not(.status-visible) {
+    display: none;
+}
+
+#field {
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid #fde8d7;
+}
+
+#field > div {
+    box-shadow: 0 0 0 1px red;
+    width: 20px;
+    height: 20px;
+    background: #EEEEEE;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#field > .cell-open {
+    background: #ffffff;
+    font-weight: 700;
+}
+
+#field > .cell-empty {
+    color: rgba(0, 0, 0, 0);
+}
+
+#field > .cell-mine {
+    background: url('image/bomb.png') #ff6666;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
